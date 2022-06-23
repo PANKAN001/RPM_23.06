@@ -1,0 +1,31 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    
+    int [] Mass = new int[100]; //Создаем массив
+    for (int i = 0; i < 100; i++) //Заполняем массив - двери закрыты
+    Mass[i] = 0;
+    
+    for (int shag = 1; shag <= 100; shag++) //Создаем шаг, с номером людей
+    {
+        for (int j = shag; j < 100; j += shag) //Перебор массива с изменением состояния двери
+        {
+            if (Mass[j] == 0)
+            {
+                Mass[j] = 1;
+            }
+            else
+            {
+                Mass[j] = 0;
+            }
+        }
+    }
+    for (int k = 0; k < 100; k++) //Выводим номера открытых дверей
+    {
+        if (Mass[k] == 1)
+        {
+            Console.WriteLine(k+1);
+        }
+    }
+  }
+}
