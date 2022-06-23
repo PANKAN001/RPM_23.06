@@ -24,7 +24,7 @@ class HelloWorld {
     {
         if (Mass[k] == 1)
         {
-            Console.WriteLine(k+1);
+            Console.WriteLine(k);
         }
     }
   }
